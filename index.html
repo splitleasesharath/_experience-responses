@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Experience Survey Responses | Split Lease</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Corporate Header A -->
+    <header class="corporate-header">
+        <div class="header-container">
+            <div class="logo">
+                <span class="logo-icon">⛴</span>
+                <span class="logo-text">Split Lease</span>
+            </div>
+            <nav class="nav-links">
+                <a href="#">Corporate Pages</a>
+                <a href="#">Unit Tests</a>
+                <button class="btn-change-prices">Change Prices</button>
+            </nav>
+            <div class="user-profile">
+                <span class="profile-icon">👤</span>
+                <span class="profile-name">User</span>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <div class="content-container">
+            <!-- Page Title -->
+            <h1 class="page-title">Experience Survey Responses</h1>
+
+            <!-- Response Counter -->
+            <div class="response-counter">
+                <span id="response-count">0</span> Responses
+            </div>
+
+            <!-- Search and Filter Section -->
+            <div class="search-filter-section">
+                <!-- Search Input -->
+                <div class="search-box">
+                    <input
+                        type="text"
+                        id="name-search"
+                        class="search-input"
+                        placeholder="Enter Name"
+                        autocomplete="off"
+                    >
+                    <span class="search-icon">🔍</span>
+                </div>
+
+                <!-- User Type Filter -->
+                <div class="filter-group">
+                    <span class="filter-label">Filter by Type:</span>
+                    <label class="checkbox-label">
+                        <input type="checkbox" id="filter-guest" checked>
+                        <span>Guest</span>
+                    </label>
+                    <label class="checkbox-label">
+                        <input type="checkbox" id="filter-host" checked>
+                        <span>Host</span>
+                    </label>
+                </div>
+            </div>
+
+            <!-- Survey List and Detail Panel -->
+            <div class="surveys-container">
+                <!-- Survey List -->
+                <div class="survey-list">
+                    <div id="survey-list-container" class="survey-list-items">
+                        <!-- Survey items will be dynamically inserted here -->
+                    </div>
+                    <div id="empty-state" class="empty-state" style="display: none;">
+                        <p>No survey responses match your filters.</p>
+                    </div>
+                    <div id="loading-state" class="loading-state">
+                        <p>Loading survey responses...</p>
+                    </div>
+                </div>
+
+                <!-- Survey Detail Panel -->
+                <div class="survey-detail-panel">
+                    <div id="detail-placeholder" class="detail-placeholder">
+                        <p>Select a survey to view details</p>
+                    </div>
+                    <div id="detail-content" class="detail-content" style="display: none;">
+                        <h2 class="detail-title">Survey Response</h2>
+
+                        <div class="detail-field">
+                            <span class="field-label">Respondent Name:</span>
+                            <span class="field-value" id="detail-name">-</span>
+                        </div>
+
+                        <div class="detail-field">
+                            <span class="field-label">User Type:</span>
+                            <span class="field-value" id="detail-type">-</span>
+                        </div>
+
+                        <div class="detail-field">
+                            <span class="field-label">Date:</span>
+                            <span class="field-value" id="detail-date">-</span>
+                        </div>
+
+                        <hr class="detail-divider">
+
+                        <div class="detail-field">
+                            <span class="field-label">Q1 - Experience Description:</span>
+                            <p class="field-text" id="detail-experience">-</p>
+                        </div>
+
+                        <div class="detail-field">
+                            <span class="field-label">Q2 - Prior Challenges:</span>
+                            <p class="field-text" id="detail-challenge">-</p>
+                        </div>
+
+                        <div class="detail-field">
+                            <span class="field-label">Q3 - Emotional Response to Challenges:</span>
+                            <p class="field-text" id="detail-challenge-experience">-</p>
+                        </div>
+
+                        <div class="detail-field">
+                            <span class="field-label">Q4 - Changes Experienced:</span>
+                            <p class="field-text" id="detail-change">-</p>
+                        </div>
+
+                        <div class="detail-field">
+                            <span class="field-label">Q5 - Memorable Service Aspects:</span>
+                            <p class="field-text" id="detail-service">-</p>
+                        </div>
+
+                        <div class="detail-field">
+                            <span class="field-label">Q6 - Desired Additional Services:</span>
+                            <p class="field-text" id="detail-additional-service">-</p>
+                        </div>
+
+                        <div class="detail-field">
+                            <span class="field-label">Q7 - Permission to Share Review:</span>
+                            <span class="field-value" id="detail-share">-</span>
+                        </div>
+
+                        <div class="detail-field">
+                            <span class="field-label">Q8 - Recommendation Likelihood:</span>
+                            <span class="field-value" id="detail-recommend">-</span>
+                        </div>
+
+                        <div class="detail-field">
+                            <span class="field-label">Q9 - Staff Appreciation:</span>
+                            <p class="field-text" id="detail-staff">-</p>
+                        </div>
+
+                        <div class="detail-field">
+                            <span class="field-label">Q10 - Follow-up Questions:</span>
+                            <p class="field-text" id="detail-questions">-</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script src="app.js"></script>
+</body>
+</html>
